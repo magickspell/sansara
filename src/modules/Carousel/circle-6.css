@@ -1,0 +1,20 @@
+.circle_6 .circle__dot:nth-child(1n) {
+  transform: rotate(60deg);
+}
+.circle_6 .circle__dot:nth-child(2n) {
+  transform: rotate(120deg);
+}
+.circle_6 .circle__dot:nth-child(3n) {
+  transform: rotate(180deg);
+}
+.circle_6 .circle__dot:nth-child(4n) {
+  transform: rotate(240deg);
+}
+.circle_6 .circle__dot:nth-child(5n) {
+  transform: rotate(300deg);
+}
+.circle_6 .circle__dot:nth-child(6n) {
+  transform: rotate(360deg);
+}
+
+/*# sourceMappingURL=circle-6.css.map */

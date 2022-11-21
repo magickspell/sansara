@@ -1,0 +1,338 @@
+.wrapper_main {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding-top: 170px;
+
+  .wrapper_main-page {
+    position: relative;
+  }
+
+  .main-page__switcher {
+    position: absolute;
+    top: -170px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 300px;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 32px;
+      font-weight: 800;
+      color: firebrick;
+    }
+
+    button {
+      font-size: 32px;
+      font-weight: 800;
+      color: black;
+      height: 40px;
+      width: 60px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:first-child {
+        background: lightcoral;
+      }
+
+      &:last-child {
+        background: lightgreen;
+      }
+    }
+  }
+
+  .main-page__title {
+    display: flex;
+    align-items: center;
+    height: auto;
+
+    .main-page__title__line {
+      width: 5px;
+      height: 120px;
+      background: linear-gradient(180deg, #3877EE -5%, #EF5DA8 85%);
+    }
+
+    h1 {
+      margin: 0;
+      padding-left: 78px;
+      height: 134px;
+      font-weight: 700;
+      font-size: 56px;
+      color: #42567A;
+      max-width: 353px;
+      box-sizing: border-box;
+    }
+  }
+
+  .main-page__years {
+    position: relative;
+    margin: 96px auto 0;
+    width: 974px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 160px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    z-index: 10;
+
+    p:first-child {
+      color: #5D5FEF;
+      transition: 1s;
+    }
+
+    p:last-child {
+      color: #EF5DA8;
+      transition: 1s;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    top: 0px;
+    bottom: 335px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 536px;
+    height: 536px;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    box-sizing: border-box;
+  }
+
+  .circle-line_horizontal {
+    position: absolute;
+    top: 268px;
+    bottom: 335px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    width: 100%;
+    background: lightgray;
+  }
+
+  .circle-line_vertical {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 1px;
+    background: lightgray;
+  }
+}
+
+
+/* circle dots
+360/6 = 60
+360/5 = 72
+360/4 = 90
+360/3 = 120
+360/2 = 180
+*/
+.circle__dot {
+  box-sizing: unset;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -28px; // -28px
+  right: 0;
+  margin-top: 268px;
+  margin-bottom: 268px;
+  width: 592px; //542px 268
+  height: 2px;
+  z-index: 20;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+
+  .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    border-radius: 100%;
+    transition: 0.3s;
+    border: 1px solid transparent;
+
+    .inner-dot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background: #42567A;
+      transition: 0.3s;
+      color: transparent;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+
+    &:hover, &.dot_selected {
+      height: 56px;
+      width: 56px;
+      background: white;
+      border: 1px solid;
+
+      .inner-dot {
+        background: transparent;
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        color: #42567A;
+      }
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 1440px) {
+  .circle,
+  .circle-line_vertical,
+  .circle-line_horizontal {
+    display: none;
+  }
+
+  .wrapper_main {
+    width: 98%;
+    padding-top: 80px;
+    min-width: 320px;
+
+    .main-page__switcher {
+      top: -80px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+
+      p {
+        font-size: 24px;
+      }
+
+      button {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .main-page__title {
+      display: flex;
+      align-items: center;
+      height: auto;
+
+      .main-page__title__line {
+        width: 0;
+        height: 0;
+      }
+
+      h1 {
+        padding-left: 20px;
+        height: 48px;
+        font-size: 48px;
+        max-width: 768px;
+      }
+    }
+
+    .main-page__years {
+      position: relative;
+      margin: 56px auto 0;
+      width: 720px;
+      height: 74px;;
+      font-size: 78px;
+      border-bottom: 2px solid lightgray;
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .circle,
+  .circle-line_vertical,
+  .circle-line_horizontal {
+    display: none;
+  }
+
+  .wrapper_main {
+    width: 98%;
+    padding-top: 80px;
+    min-width: 320px;
+
+    .main-page__switcher {
+      top: -80px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+
+      p {
+        font-size: 24px;
+      }
+
+      button {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .main-page__title {
+      display: flex;
+      align-items: center;
+      height: auto;
+
+      .main-page__title__line {
+        width: 0;
+        height: 0;
+      }
+
+      h1 {
+        padding-left: 20px;
+        height: 48px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #42567A;
+        max-width: 353px;
+        box-sizing: border-box;
+      }
+    }
+
+    .main-page__years {
+      position: relative;
+      margin: 56px auto 0;
+      width: 274px;
+      height: 74px;;
+      font-size: 56px;
+      border-bottom: 2px solid lightgray;
+    }
+  }
+}

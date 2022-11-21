@@ -1,0 +1,137 @@
+.main-page__carousel {
+  background: transparent;
+  margin-top: 138px;
+  padding: 0 40px 104px;
+
+  .main-page__carousel__head {
+    margin-bottom: 56px;
+
+    .main-page__carousel__head__indexes {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+
+    .main-page__carousel__head__btn {
+      button {
+        background: #FFFFFF;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        outline: 0;
+        border: 1px solid lightgray;
+        margin-right: 20px;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .main-page__carousel__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //gap: 80px;
+
+    button {
+      width: 40px;
+      height: 40px;
+      background: #FFFFFF;
+      box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+      border: 1px solid lightgray;
+      border-radius: 100%;
+      color: rgba(56, 119, 238, 1);
+    }
+
+    .main-page__carousel__body__items {
+      display: flex;
+      //gap: 80px;
+      height: 160px;
+      cursor: grab;
+    }
+  }
+}
+
+/* slider buttons */
+.swiper-wrapper {
+  cursor: grab;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 32px !important;
+  height: 32px;
+  background: #FFFFFF;
+  box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  color: rgba(56, 119, 238, 1);
+
+  &:after {
+    font-size: 20px !important;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper_mobile {
+  display: none !important;
+}
+
+.swiper-pagination {
+  top: 186px !important;
+}
+
+/* animation */
+.swiper {
+  transition: 1s;
+  //animation: fadein 1s ease-in alternate;
+}
+
+.swiper_invisible {
+  //opacity: 0;
+  animation: fadein 0.5s ease-in alternate;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 1440px) {
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .main-page__carousel {
+    position: relative;
+    background: transparent;
+    margin-top: 120px;
+    margin-bottom: 160px;
+    padding: 0 8px 24px;
+
+    .main-page__carousel__head {
+      position: absolute;
+      top: 192px;
+      left: 20px;
+    }
+  }
+  .swiper {
+    display: none;
+  }
+  .swiper_mobile {
+    display: block !important;
+  }
+}
