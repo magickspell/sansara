@@ -42,7 +42,7 @@
   cursor: grab;
 }
 
-/* slider buttons */
+/* swiper slider buttons */
 .swiper-wrapper {
   cursor: grab;
 }
@@ -79,7 +79,7 @@
 }
 
 /* animation */
-.swiper {
+.swiper, .swiper-mobile {
   transition: 1s;
 }
 
@@ -95,7 +95,6 @@
     opacity: 1;
   }
 }
-/* MOBILE */
 /* MOBILE */
 @media (max-width: 768px) {
   .main-page__carousel {

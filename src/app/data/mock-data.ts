@@ -215,6 +215,7 @@ const science: dataI = {
     ]
 }
 
+/* collect all data and return */
 export const db: mockData = {
     data: [
         {

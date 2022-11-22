@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Carousel} from "../../modules/Carousel/Carousel";
 import {db} from "../../app/data/mock-data";
 import {Roulette} from "../../components/roulet/Roulette";
@@ -26,6 +26,7 @@ export const MainPage = () => {
     useEffect(() => {
         setPeriod(1)
     }, [periods])
+
     function periodPlus() {
         if (periods > period) setPeriod(prev => prev + 1)
     }

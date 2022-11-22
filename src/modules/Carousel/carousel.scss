@@ -52,7 +52,7 @@
   }
 }
 
-/* slider buttons */
+/* swiper slider buttons */
 .swiper-wrapper {
   cursor: grab;
 }
@@ -89,13 +89,11 @@
 }
 
 /* animation */
-.swiper {
+.swiper, .swiper-mobile {
   transition: 1s;
-  //animation: fadein 1s ease-in alternate;
 }
 
 .swiper_invisible {
-  //opacity: 0;
   animation: fadein 0.5s ease-in alternate;
 }
 
@@ -106,11 +104,6 @@
   to {
     opacity: 1;
   }
-}
-
-/* MOBILE */
-@media (max-width: 1440px) {
-
 }
 
 /* MOBILE */

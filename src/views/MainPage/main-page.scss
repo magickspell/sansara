@@ -107,7 +107,7 @@
 
   .circle {
     position: absolute;
-    top: 0px;
+    top: 0;
     bottom: 335px;
     left: 0;
     right: 0;
@@ -264,7 +264,6 @@
     }
 
     .main-page__years {
-      position: relative;
       margin: 56px auto 0;
       width: 720px;
       height: 74px;;
@@ -276,63 +275,27 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .circle,
-  .circle-line_vertical,
-  .circle-line_horizontal {
-    display: none;
-  }
-
   .wrapper_main {
-    width: 98%;
-    padding-top: 80px;
-    min-width: 320px;
 
     .main-page__switcher {
       top: -80px;
-      left: 0;
-      right: 0;
-      margin-right: auto;
-      margin-left: auto;
 
       p {
         font-size: 24px;
       }
-
-      button {
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
     }
 
     .main-page__title {
-      display: flex;
-      align-items: center;
-      height: auto;
-
-      .main-page__title__line {
-        width: 0;
-        height: 0;
-      }
 
       h1 {
-        padding-left: 20px;
-        height: 48px;
-        font-weight: 700;
         font-size: 20px;
-        color: #42567A;
-        max-width: 353px;
-        box-sizing: border-box;
       }
     }
 
     .main-page__years {
-      position: relative;
-      margin: 56px auto 0;
       width: 274px;
-      height: 74px;;
+      height: 74px;
       font-size: 56px;
-      border-bottom: 2px solid lightgray;
     }
   }
 }

@@ -61,24 +61,8 @@
     padding-right: 40px;
     z-index: 10;
   }
-  .main-page__carousel__body__item h4 {
-    margin: 0 0 4px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 120%;
-    text-transform: uppercase;
-    color: #3877EE;
-  }
   .main-page__carousel__body__item p {
-    margin: 0;
-    position: absolute;
-    width: 160px;
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
-    color: #42567A;
   }
 }
 

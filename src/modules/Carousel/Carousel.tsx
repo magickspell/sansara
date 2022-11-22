@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import {CarouselItem} from "../../components/carousel-item/CarouselItem";
 import {db} from "../../app/data/mock-data";
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
@@ -21,7 +21,7 @@ export const Carousel = (props: propsI) => {
 
     const data = db.data;
 
-    /* animation with add remove class (keyframe) !!didnot work on fast updates*/
+    /* animation with add remove class (keyframe) !!did not work on fast updates*/
     useEffect(() => {
         document.getElementsByClassName('swiper')[0].classList.add('swiper_invisible')
         setTimeout(() => {
@@ -86,7 +86,6 @@ export const Carousel = (props: propsI) => {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={0}
                 slidesPerView={2}
-                navigation
                 watchSlidesProgress
                 pagination={{ clickable: true }}
                 className={[

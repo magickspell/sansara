@@ -18,6 +18,7 @@ export const TextTyping = (props: propsI) => {
         return () => {
         }
     }, [index])
+
     /* trigger changes */
     useEffect(() => {
         setText("")
